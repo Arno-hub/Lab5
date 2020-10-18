@@ -1,0 +1,24 @@
+1.
+
+Création d'un nouveau fichier script --> vim master.sh
+Pour indiquer le type de shell utilisé --> A ajouter dès le début du scrypt 
+-->  #!/bin/bash
+Pour lister les fichiers se trouvant dans le lab4 --> On ajoute le path après la commande ls 
+--> ls ~/Desktop/lab4/lab4
+Création de la variable master syscom qui stocke la chaîne de caractère
+--> master_syscom='Hello Embedded Linux'
+affichage de la variable --> echo $master_syscom
+Ajouter le droit d'execution du fichier --> chmod +x master.sh
+Après execution --> bon fonctionnement --> affichage des fichiers présents dans le lab4 et du message stocké dans la variable master_syscom
+
+2. 
+
+Création d'un nouveau fichier script intitulé --> "test.sh" 
+--> indication du shell utilisé 
+definition de la fonction qui testera les deux nombre --> function test(){
+}
+Pour executer le script, entrer les arguments--> On tape dans le terminal --> source test.sh; test 2 3 
+--> On obtient en sortie --> 
+--> Le premier argument est 2
+--> le deuxième argument est 3
+--> le nombre 2 est inférieur au nombre 3
