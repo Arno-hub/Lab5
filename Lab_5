@@ -15,10 +15,14 @@ Après execution --> bon fonctionnement --> affichage des fichiers présents dan
 
 Création d'un nouveau fichier script intitulé --> "test.sh" 
 --> indication du shell utilisé 
-definition de la fonction qui testera les deux nombre --> function test(){
-}
-Pour executer le script, entrer les arguments--> On tape dans le terminal --> source test.sh; test 2 3 
+-->definition de la fonction qui testera les deux nombre rentrés en paramètre par l'utilisateur via les variables $1 et $2.
+-->Après avoir donné le droit d'éxecution on peut executer le script.
+-->Pour executer le script, entrer les arguments--> On tape dans le terminal --> ./test.sh 2 3 
 --> On obtient en sortie --> 
 --> Le premier argument est 2
 --> le deuxième argument est 3
 --> le nombre 2 est inférieur au nombre 3
+
+3/4/5/6
+
+--> Codes associés dans le répertoire lab5
