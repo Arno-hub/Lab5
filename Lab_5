@@ -15,9 +15,9 @@ Après execution --> bon fonctionnement --> affichage des fichiers présents dan
 
 Création d'un nouveau fichier script intitulé --> "test.sh" 
 --> indication du shell utilisé 
--->definition de la fonction qui testera les deux nombre rentrés en paramètre par l'utilisateur via les variables $1 et $2.
--->Après avoir donné le droit d'éxecution on peut executer le script.
--->Pour executer le script, entrer les arguments--> On tape dans le terminal --> ./test.sh 2 3 
+--> definition de la fonction qui testera les deux nombre rentrés en paramètre par l'utilisateur via les variables $1 et $2.
+--> Après avoir donné le droit d'éxecution on peut executer le script.
+--> Pour executer le script, entrer les arguments--> On tape dans le terminal --> ./test.sh 2 3 
 --> On obtient en sortie --> 
 --> Le premier argument est 2
 --> le deuxième argument est 3
@@ -31,8 +31,8 @@ On peut s'attacher à décrire la première solution de ce script qui utilise l'
 On se place dans un premier temps dans le répertoire de la partie 4 (lab4) en definissant une variable --> path_to_4
 -->path_to_4=~/Desktop/Lab_Info/lab4/lab4/*/
 On réalise ensuite une boucle for dans la variable path_to_4 via la variable dir.
-On verifie ensuite si le fichier que parcour la variable dir est un répertoire avec la commande -->if [ -d "$dir" ];
-Si c'est le cas, on prélève le nom du fichier uniquement en supprimant le path y menant via les commandes --> 	dir="${dir%/}" dir="${dir##*/}" 
+On verifie ensuite si le fichier que parcourt la variable dir est un répertoire avec la commande -->if [ -d "$dir" ];
+Si c'est le cas, on prélève le nom du fichier uniquement en supprimant le path y menant via les commandes --> dir="${dir%/}" dir="${dir##*/}" 
 On affiche ensuite le répertoire --> echo "$dir est un répertoire"
 
 4./5.
@@ -54,12 +54,12 @@ Si jamais le répertoire rentré en paramètre par l'utlisateur n'est pas valide
 --> On affiche --> else 
 	echo " Le répertoire $1 n'existe pas , rentrer à nouveau un répertoire valide. "
 
-/6
+6.
 On désire désormais écrire un script qui permet de télécharder des webcomics, en l'occurence sur le site xkcd.
 De plus, on sait que que l'URL de chaque image sur chaque page --> http://xkcd.com/... --> se trouve à chaque fois sur une ligne contenant le mot "hotlinking".
 Pour arriver à réaliser cela, j'ai implémenté le script --> "Image_download.sh
 Dans ce script, je déclare une boucle for qui va parcourir les 10 pages du site considéré --> for i in 1 2 3 4 5 6 7 8 9 10 .
-Je prélève ensuite l'URL de chaque image présente sur chaque page sur la même ligne que "hotlinking" --> 	image="$(wget -qO- http://xkcd.com/$i | grep -oP 'hotlinking.*')"
+Je prélève ensuite l'URL de chaque image présente sur chaque page sur la même ligne que "hotlinking" --> image="$(wget -qO- http://xkcd.com/$i | grep -oP 'hotlinking.*')"
 Je télécharge ensuite l'image directement après avoir prélevé son URL --> wget $image  
 Après avoir réalisé le téléchargement de toutes les images qui sont stockées dans le répertoire du Lab5.
 Je me positionne dans ce répertoire --> cd ~/Desktop/Lab_Info/lab5/
